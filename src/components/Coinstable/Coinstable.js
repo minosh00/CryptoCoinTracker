@@ -10,7 +10,6 @@ import {
   Container,
   createTheme,
   TableCell,
-  LinearProgress,
   ThemeProvider,
   Typography,
   TextField,
@@ -34,7 +33,7 @@ export function numberWithCommas(x) {
   
   export default function Coinstable() {
     const [coins, setCoins] = useState([]);
-    const [loading, setLoading] = useState(false);
+    
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
   

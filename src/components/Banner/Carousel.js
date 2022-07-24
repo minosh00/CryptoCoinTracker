@@ -51,7 +51,7 @@ const Carousel = () => {
     useEffect(()=>{
 
         DisplayTrandingcoins();
-    });
+    },[]);
 
 
     const items =tranding.map((coins)=>{

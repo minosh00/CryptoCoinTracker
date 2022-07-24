@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { makeStyles } from "@material-ui/core";
 import { CryptoState } from '../../CryptoContext';
 import { TrendingCoins } from '../../Api/api';
@@ -41,7 +41,7 @@ const Carousel = () => {
 
 
 
-    const  displayTrandingcoins =async () =>{
+    const  DisplayTrandingcoins =async () =>{
         const { data } = await  axios.get(TrendingCoins(currecy))
 
         settranding(data);
@@ -50,7 +50,7 @@ const Carousel = () => {
 
     useEffect(()=>{
 
-        displayTrandingcoins();
+        DisplayTrandingcoins();
     },[currecy]);
 
 

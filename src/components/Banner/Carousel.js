@@ -39,7 +39,7 @@ const Carousel = () => {
 
     const { currecy, symbol} = CryptoState();
 
-
+//const currecy= CryptoState();
 
     const  DisplayTrandingcoins =async () =>{
         const { data } = await  axios.get(TrendingCoins(currecy))
@@ -51,7 +51,7 @@ const Carousel = () => {
     useEffect(()=>{
 
         DisplayTrandingcoins(currecy);
-    },currecy);
+    },[currecy]);
 
 
     const items =tranding.map((coins)=>{

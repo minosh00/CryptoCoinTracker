@@ -50,7 +50,7 @@ const Carousel = () => {
 
     useEffect(()=>{
 
-        DisplayTrandingcoins();
+        DisplayTrandingcoins(currecy);
     },currecy);
 
 

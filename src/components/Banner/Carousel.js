@@ -51,9 +51,9 @@ const Carousel = () => {
     useEffect(()=>{
 
         DisplayTrandingcoins(currecy);
-    },[currecy]);
+    });
 
-
+//
     const items =tranding.map((coins)=>{
 
         let profit = coins.price_change_percentage_24h>=0; 

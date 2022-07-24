@@ -33,7 +33,7 @@ export function numberWithCommas(x) {
   
   export default function Coinstable() {
     const [coins, setCoins] = useState([]);
-    const [loading, setLoading] = useState(false);
+    
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
   
@@ -55,6 +55,7 @@ export function numberWithCommas(x) {
       },
     });
   
+    
     const classes = useStyles();
     const history = useHistory();
   
@@ -68,14 +69,17 @@ export function numberWithCommas(x) {
     });
   
     const fetchCoins = async () => {
-      setLoading(true);
+     
       const { data } = await axios.get(CoinList(currecy));
       console.log(data);
   
       setCoins(data);
-      setLoading(false);
+     
     };
   
+
+   
+
     useEffect(() => {
       fetchCoins();
       // eslint-disable-next-line react-hooks/exhaustive-deps
